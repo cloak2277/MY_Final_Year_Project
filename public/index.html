@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Department Scheduler</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- LOGIN / REGISTER -->
+<div id="auth">
+  <div class="authcard">
+    <div class="head">
+      <div class="mark">Depart<b>ment</b> Scheduler</div>
+      <div class="sub">Academic resource allocation &amp; timetabling</div>
+    </div>
+    <div class="authtabs">
+      <button id="tabSignin" aria-selected="true">Sign in</button>
+      <button id="tabSignup" aria-selected="false">Register</button>
+    </div>
+    <div class="authbody">
+      <div class="err" id="authErr"></div>
+      <div id="paneSignin">
+        <div class="field"><label class="f">Email</label><input id="li_email" type="email" autocomplete="username" /></div>
+        <div class="field"><label class="f">Password</label><input id="li_pass" type="password" autocomplete="current-password" /></div>
+        <button class="btn primary block" id="doLogin">Sign in</button>
+        <div class="demo">Demo logins —<br><b>admin@delsu.edu.ng / admin123</b> (admin)<br><b>edafe@delsu.edu.ng / lecturer123</b> (lecturer)<br><b>student300@delsu.edu.ng / student123</b> (student)</div>
+      </div>
+      <div id="paneSignup" style="display:none">
+        <div class="field"><label class="f">Full name</label><input id="su_name" /></div>
+        <div class="field"><label class="f">Email</label><input id="su_email" type="email" /></div>
+        <div class="field"><label class="f">Password</label><input id="su_pass" type="password" /></div>
+        <button class="btn primary block" id="doSignup">Create student account</button>
+        <div class="demo">Self-registration creates a <b>student</b> account. Lecturer and admin accounts are created by an administrator.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="topbar">
+    <div class="brand"><span class="mark">Depart<b>ment</b> Scheduler</span><span class="tag">live conflict detection</span></div>
+    <span class="spacer"></span>
+    <div class="who">
+      <div class="av" id="whoAv">?</div>
+      <div><div class="nm" id="whoName">—</div><div class="rl" id="whoRole"></div></div>
+      <button class="btn sm" id="logout" style="margin-left:6px">Log out</button>
+    </div>
+  </div>
+  <div class="layout">
+    <nav class="side" id="nav"></nav>
+    <main class="content" id="content"></main>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

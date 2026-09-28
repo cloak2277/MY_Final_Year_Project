@@ -1,0 +1,20 @@
+{
+  "name": "dept-scheduler",
+  "version": "1.0.0",
+  "description": "Academic department resource allocation & scheduling platform with conflict detection",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite server/index.js",
+    "seed": "node --experimental-sqlite server/seed.js",
+    "dev": "node --experimental-sqlite --watch server/index.js",
+    "test": "node --experimental-sqlite tests/api.test.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
